@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #2e86c1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .menu-icon {
+    display: none;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .nav-items li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav .nav-items li a {
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav .nav-items li a:hover {
+    color: #dcdde1;
+}
+
+/* Content Styles */
+.content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2em;
+    color: #2e86c1;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.content form input, 
+.content form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.content form textarea {
+    resize: vertical;
+}
+
+.content form button {
+    padding: 10px 20px;
+    background-color: #2e86c1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content form button:hover {
+    background-color: #1b4f72;
+}

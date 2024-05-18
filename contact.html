@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form to Email Using Javascript</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contact-form" onsubmit="sendemail(event)">
+            <h3>GET IN TOUCH</h3>
+            <input type="hidden" name="access_key" value="30aa70e4-5c02-4784-81ec-b20f98b0d604">
+
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone No." required>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendemail(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "your-email@gmail.com",
+                Password: "your-email-password",
+                To: 'your-email@gmail.com',
+                From: email,
+                Subject: "New Contact Form Enquiry",
+                Body: Name: ${name}<br>Email: ${email}<br>Phone: ${phone}<br>Message: ${message}
+            }).then(
+                response => alert("Email sent successfully")
+            ).catch(
+                error => alert("Failed to send email: " + error)
+            );
+        }
+    </script>
+</body>
+</html>

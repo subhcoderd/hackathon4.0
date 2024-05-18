@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+</head>
+<body>
+    <h2>Book an Appointment</h2>
+    <form action="/submit-appointment" method="post">
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="specialist">Select Specialist:</label><br>
+        <select id="specialist" name="specialist" required>
+            <option value="" disabled selected>Select a specialist</option>
+            <option value="general-physician">General Physician</option>
+            <option value="dermatologist">Dermatologist</option>
+            <option value="cardiologist">Cardiologist</option>
+            <option value="dentist">Dentist</option>
+            <option value="pediatrician">Pediatrician</option>
+            <option value="gynecologist">Gynecologist</option>
+        </select><br><br>
+
+        <label for="appointment-date">Preferred Appointment Date:</label><br>
+        <input type="date" id="appointment-date" name="appointment-date" required><br><br>
+
+        <label for="message">Additional Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Any additional details..."></textarea><br><br>
+        <a href="succesfulpopup.html"></a>
+        <button type="submit">Book Appointment</button>
+    </form>
+</body>
+</html>
